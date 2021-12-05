@@ -1,7 +1,7 @@
 {
   "name": "steamapi.cloudno.de",
   "version": "1.0.0",
-  "description": "Returns Steam API query results in JSON format",
+  "description": "Returns steam API query results in JSON format",
   "main": "server",
   "scripts": {
     "start": "tsc&& node -r dotenv/config server"
@@ -9,7 +9,9 @@
   "keywords": [],
   "author": "a-sync@devs.space",
   "license": "GPLv3",
-  "dependencies": {},
+  "dependencies": {
+    "got": "^9.6.0"
+  },
   "devDependencies": {
     "@types/node": "^8.10.66",
     "dotenv": "^10.0.0",
