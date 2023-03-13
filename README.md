@@ -1,4 +1,4 @@
-# steamapi.cloudno.de
+# steam-json-web-api
 Web service that returns steam API query results in JSON format
 
 ## Accepted request query fields
