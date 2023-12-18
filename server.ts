@@ -18,7 +18,7 @@ createServer((req, res) => {
         };
         got('https://api.steampowered.com/IGameServersService/GetServerList/v1/?filter=\\appid\\' + filter_appid + '\\addr\\' + filter_addr + '&key=' + STEAM_WEB_API_KEY, {
             responseType: 'json',
-            headers: {'user-agent': 'steamapi.cloudno.de/1.0'}
+            headers: {'user-agent': 'steam-json-web-api/1.0'}
         }).then(data => {
             res.writeHead(200, res_headers);
             res.end(JSON.stringify(JSON.parse(data.body), null, DBG ? 2 : null));
@@ -28,7 +28,7 @@ createServer((req, res) => {
             res.end(JSON.stringify({ error: err.message }, null, DBG ? 2 : null));
         });
     } else {
-        res.writeHead(301, { 'Location': 'https://github.com/a-sync/steamapi.cloudno.de' });
+        res.writeHead(301, { 'Location': 'https://github.com/a-sync/steam-json-web-api#accepted-request-query-fields' });
         res.end();
     }
 }).listen(80, '0.0.0.0');
